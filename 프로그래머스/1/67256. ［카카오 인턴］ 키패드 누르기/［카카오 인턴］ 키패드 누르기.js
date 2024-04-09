@@ -3,17 +3,13 @@ function solution(numbers, hand) {
     let pad = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], ["*", "0", "#"]]
     let current = [[3, 0],[3, 2]];
     let target = [0, 0];
-    let count = 0;
-    let max = 0;
     
     function useLeft() {
-        count = Math.abs(current[0][0]-target[0])+Math.abs(current[0][1]-target[1]);
         current[0] = target;
         answer += "L";
     }
 
     function useRight() {
-        count = Math.abs(current[1][0]-target[0])+Math.abs(current[1][1]-target[1]);
         current[1] = target;
         answer += "R";
     }
