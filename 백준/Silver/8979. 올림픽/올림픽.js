@@ -30,7 +30,7 @@ else {
     else {
       if (medal[i - 1][2] > medal[i][2]) grade++;
       else {
-        if (medal[i - 1][3] > medal[i - 1][3]) grade++;
+        if (medal[i - 1][3] > medal[i][3]) grade++;
       }
     }
     if (medal[i][0] === K) {
