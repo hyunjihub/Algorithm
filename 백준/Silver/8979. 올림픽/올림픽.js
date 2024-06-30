@@ -25,12 +25,22 @@ medal.sort((a, b) => {
 if (medal[0][0] === K) console.log(1);
 else {
   let grade = 1;
+  let same = 0;
   for (let i = 1; i < N; i++) {
-    if (medal[i - 1][1] > medal[i][1]) grade++;
-    else {
-      if (medal[i - 1][2] > medal[i][2]) grade++;
-      else {
-        if (medal[i - 1][3] > medal[i][3]) grade++;
+    if (medal[i - 1][1] > medal[i][1]) {
+      grade += same + 1;
+      same = 0;
+    } else {
+      if (medal[i - 1][2] > medal[i][2]) {
+        grade += same + 1;
+        same = 0;
+      } else {
+        if (medal[i - 1][3] > medal[i][3]) {
+          grade += same + 1;
+          same = 0;
+        } else {
+          same++;
+        }
       }
     }
     if (medal[i][0] === K) {
