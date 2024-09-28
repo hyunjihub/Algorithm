@@ -5,7 +5,7 @@
   [![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=syub98774)](https://solved.ac/syub98774)
   
   [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api/badge?name=syub98774)](https://velog.io/@syub98774)
-  ##### 문제는 Java(현재풀이안함)와 JavaScript로 풀이합니다.
+  ##### 문제는 JavaScript로 풀이합니다.
   ##### 일부 문제 풀이 및 회고는 벨로그에 작성하고 있습니다.
 </div>
 
