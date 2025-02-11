@@ -1,23 +1,19 @@
 const fs = require('fs');
-let n = fs.readFileSync(0, 'utf-8').toString().trim().split('\n');
+let input = fs.readFileSync(0, 'utf-8').toString().trim().split('\n').map(Number);
 
 let answer = '';
-for (let i = 0; i < n.length; i++) {
-  n[i] = Number(n[i]);
+for (let i = 0; i < input.length; i++) {
+  let n = input[i];
 
-  let remainder = 1 % n[i];
-  let length = 1;
-  let remainders = new Set();
+  let remainder = 1 % n; 
+  let count = 1;        
 
   while (remainder !== 0) {
-    if (remainders.has(remainder)) break;
-    remainders.add(remainder);
-
-    remainder = (remainder * 10 + 1) % n[i];
-    length++;
+    remainder = (remainder * 10 + 1) % n; 
+    count++; 
   }
 
-  answer += length + '\n';
+  answer += count + '\n';
 }
 
 console.log(answer.trim());
