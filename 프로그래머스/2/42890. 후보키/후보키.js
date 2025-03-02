@@ -22,16 +22,21 @@ function solution(relation) {
         return true;
     }
 
-    for (let i = 1; i < (1 << columnLength); i++) {
-        let attributes = [];
-        for (let j = 0; j < columnLength; j++) {
-            if (i & (1 << j)) attributes.push(j);
+    function findCombinations(start, attributes) {
+        if (start === columnLength) {
+            if (isUnique(attributes) && isMinimal(attributes)) {
+                candidateKeys.push(attributes.slice());
+            }
+            return;
         }
 
-        if (isUnique(attributes) && isMinimal(attributes)) {
-            candidateKeys.push(attributes);
-        }
+        findCombinations(start + 1, attributes);
+        attributes.push(start);
+        findCombinations(start + 1, attributes);
+        attributes.pop();
     }
+
+    findCombinations(0, []);
 
     return candidateKeys.length;
 }
