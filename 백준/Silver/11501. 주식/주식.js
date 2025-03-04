@@ -2,21 +2,24 @@ const fs = require('fs');
 let [T, ...input] = fs.readFileSync(0, 'utf-8').toString().trim().split('\n');
 
 T = Number(T);
-
 let index = 0;
+
+let answer = '';
 for (let i = 0; i < T; i++) {
   let N = Number(input[index++]);
-  let stockPrice = input[index++].trim().split(' ').map(Number);
+  let stock = input[index++].trim().split(' ').map(Number);
 
-  let max = 0;
+  let max = stock[N - 1];
   let sum = 0;
-  for (let j = N - 1; j >= 0; j--) {
-    if (max < stockPrice[j]) {
-      max = stockPrice[j];
-    } else if (max > stockPrice[j]) {
-      sum += max - stockPrice[j];
+  for (let i = N - 2; i >= 0; i--) {
+    if (stock[i] < max) {
+      sum += max - stock[i];
+    } else if (stock[i] > max) {
+      max = stock[i];
     }
   }
 
-  console.log(sum);
+  answer += sum + '\n';
 }
+
+console.log(answer.trim());
