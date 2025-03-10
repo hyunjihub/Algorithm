@@ -13,9 +13,9 @@ for (let i = 0; i < T; i++) {
   let dp = Array.from({ length: M + 1 }, () => 0);
   dp[0] = 1;
 
-  for (let j = 0; j < coins.length; j++) {
-    for (let k = coins[j]; k <= M; k++) {
-      dp[k] += dp[k - coins[j]];
+  for (let i = 0; i < N; i++) {
+    for (let j = coins[i]; j <= M; j++) {
+      dp[j] += dp[j - coins[i]];
     }
   }
 
