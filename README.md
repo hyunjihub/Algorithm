@@ -9,3 +9,15 @@
   ##### 일부 문제 풀이 및 회고는 벨로그에 작성하고 있습니다.
 </div>
 
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/hyunjihub/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/hyunjihub/Algorithm/tree/master/0121-best-time-to-buy-and-sell-stock) |
+<!---LeetCode Topics End-->
