@@ -1,6 +1,6 @@
 <div align="center">
   
-# 🎶 백준 / 프로그래머스 🎶
+# 🎶 백준 / 프로그래머스 / Leetcode 🎶
   ### 풀이한 문제를 Velog에 자동으로 업로드합니다.
   [![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=syub98774)](https://solved.ac/syub98774)
   
